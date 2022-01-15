@@ -1,0 +1,28 @@
+version: '3'
+
+services: 
+  # scripts:
+  #   build: 
+  #     context: .
+
+  # database:
+  #   image: mysql:8.0
+  #   command: --default-authentication-plugin=mysql_native_password
+  #   restart: always
+  #   ports:
+  #     - 3308:3306
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: C0mp4ny
+  #     MYSQL_DATABASE: neurotech
+  #   healthcheck:
+  #     test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+  #     timeout: 20s
+  #     retries: 10
+
+  jupyter:
+    image: jupyter/datascience-notebook
+    ports:
+      - 8888:8888
+    volumes:
+      - ./files:/home/jovyan/work/files
+      - ./jupyter:/home/jovyan/work
