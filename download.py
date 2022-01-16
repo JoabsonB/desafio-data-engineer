@@ -24,7 +24,3 @@ def download_files(estado):
         unzip_and_delete(estado, i, 'DET')
         download_file(estado, i, 'CONS')
         unzip_and_delete(estado, i, 'CONS')
-        
-
-for estado in estados:
-    download_files(estado)
